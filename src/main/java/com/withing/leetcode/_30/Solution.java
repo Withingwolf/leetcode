@@ -17,6 +17,7 @@ public class Solution {
         int index = 0;
         List<Integer> answer = new ArrayList<>();
         while (index + totalLength <= s.length()) {
+            //这里需要加个判断,如果前面的words[0].length 找不到,就别切割了
             String temp = s.substring(index, index + totalLength);
             String[] tWords = splitStr(temp, length);
             if (compareStrings(tWords, words)) {
